@@ -3,34 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#183b32">
-    <meta name="description" content="Pizzeria La Svolta a Fermo: ci trovi in Via Dante Zeppilli 13. Aperta dal lunedì al sabato, dalle 16:30 alle 21:45. Chiama per informazioni e ordini.">
+    <meta name="theme-color" content="#244b9b">
+    <meta name="description" content="Scopri il menù e i prezzi della Pizzeria La Svolta a Fermo: pizze, calzoni e focacce. Ci trovi in Via Dante Zeppilli 13.">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Pizzeria La Svolta | Una buona serata, a Fermo">
-    <meta property="og:description" content="Pizza da gustare al tavolo, da asporto o a domicilio. Scopri La Svolta in Via Dante Zeppilli 13, a Fermo.">
+    <meta property="og:title" content="Pizzeria La Svolta a Fermo | Menù e prezzi">
+    <meta property="og:description" content="Scopri il menù con i prezzi di pizze, calzoni e focacce. Ci trovi in Via Dante Zeppilli 13, a Fermo.">
     <meta property="og:image" content="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=1200&auto=format&fit=crop">
-    <title>Pizzeria La Svolta a Fermo | Orari, indirizzo e contatti</title>
+    <title>Pizzeria La Svolta a Fermo | Menù, prezzi e contatti</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://images.unsplash.com">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Nunito+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="preload" as="image" href="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=2000&auto=format&fit=crop">
     <style>
         :root {
             color-scheme: light;
-            --ink: #1d302a;
-            --green: #183b32;
-            --green-soft: #244b3f;
-            --paper: #f7f5ef;
+            --ink: #282724;
+            --green: #244b9b;
+            --green-soft: #315cad;
+            --paper: #fcf8f0;
             --white: #fffefa;
-            --muted: #6b756e;
-            --line: #e8e5dc;
-            --tomato: #bd583d;
-            --tomato-dark: #9f432d;
-            --gold: #d7a24a;
-            --serif: "DM Serif Display", Georgia, serif;
-            --sans: "DM Sans", Arial, sans-serif;
-            --shadow: 0 24px 70px rgba(29, 48, 42, .11);
+            --muted: #70685e;
+            --line: #e9e1d5;
+            --tomato: #c65b3b;
+            --tomato-dark: #a9472d;
+            --gold: #e7ae45;
+            --serif: "Bree Serif", Georgia, serif;
+            --sans: "Nunito Sans", Arial, sans-serif;
+            --shadow: 0 24px 70px rgba(40, 39, 36, .1);
         }
 
         *, *::before, *::after { box-sizing: border-box; }
@@ -71,8 +71,8 @@
             position: sticky;
             z-index: 20;
             top: 0;
-            border-bottom: 1px solid rgba(29, 48, 42, .08);
-            background: rgba(247, 245, 239, .94);
+            border-bottom: 1px solid rgba(36, 75, 155, .1);
+            background: rgba(252, 248, 240, .94);
             backdrop-filter: blur(14px);
         }
         .header-inner {
@@ -83,18 +83,8 @@
             gap: 28px;
         }
         .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; }
-        .brand-mark {
-            display: grid;
-            width: 42px;
-            height: 42px;
-            place-items: center;
-            border: 1px solid rgba(215, 162, 74, .55);
-            border-radius: 50%;
-            color: var(--tomato);
-            font-family: var(--serif);
-            font-size: 1.15rem;
-        }
-        .brand-name { display: block; font-family: var(--serif); font-size: 1.25rem; line-height: 1; }
+        .brand-logo { width: 96px; height: 32px; object-fit: contain; }
+        .brand-name { display: block; font-family: var(--serif); font-size: 1.25rem; line-height: 1; white-space: nowrap; }
         .brand-location { display: block; margin-top: 5px; color: var(--muted); font-size: .64rem; letter-spacing: .12em; text-transform: uppercase; }
         .main-nav { display: flex; align-items: center; gap: clamp(18px, 3vw, 36px); }
         .main-nav a { color: #45554d; font-size: .86rem; font-weight: 600; text-decoration: none; transition: color .2s ease; }
@@ -117,7 +107,7 @@
         .button-primary:hover { background: var(--tomato-dark); }
         .button-outline { border-color: rgba(255,255,255,.55); color: #fff; }
         .button-outline:hover { background: #fff; color: var(--green); }
-        .header-call { min-height: 42px; padding-inline: 17px; font-size: .82rem; }
+        .header-call { min-height: 42px; flex-shrink: 0; padding-inline: 17px; font-size: .82rem; white-space: nowrap; }
 
         .hero {
             position: relative;
@@ -130,7 +120,7 @@
         }
         .hero-image, .hero-shade { position: absolute; inset: 0; width: 100%; height: 100%; }
         .hero-image { object-fit: cover; object-position: center 54%; }
-        .hero-shade { background: linear-gradient(90deg, rgba(16, 39, 32, .91) 0%, rgba(16, 39, 32, .73) 48%, rgba(16, 39, 32, .14) 100%), linear-gradient(0deg, rgba(16,39,32,.25), transparent 40%); }
+        .hero-shade { background: linear-gradient(90deg, rgba(17, 39, 78, .91) 0%, rgba(17, 39, 78, .73) 48%, rgba(17, 39, 78, .14) 100%), linear-gradient(0deg, rgba(17,39,78,.25), transparent 40%); }
         .hero-content { position: relative; z-index: 1; width: min(740px, 100%); padding-block: 100px 120px; }
         .hero .eyebrow { color: #f0c46b; }
         h1, h2, h3, p { margin-top: 0; }
@@ -149,7 +139,7 @@
             gap: 13px;
             padding: 15px 19px;
             border: 1px solid rgba(255,255,255,.22);
-            background: rgba(22, 47, 39, .74);
+            background: rgba(27, 48, 98, .78);
             backdrop-filter: blur(10px);
         }
         .rating-stars { color: #f0c46b; letter-spacing: .08em; }
@@ -163,12 +153,12 @@
         .intro-aside { position: relative; padding: 37px 38px; border-left: 2px solid var(--gold); background: var(--white); box-shadow: var(--shadow); }
         .intro-aside p { margin: 0; font-family: var(--serif); font-size: clamp(1.35rem, 2.4vw, 1.85rem); line-height: 1.45; }
         .intro-aside span { display: block; margin-top: 17px; color: var(--muted); font-size: .78rem; }
-        .experiences { padding-block: 82px 92px; background: #eeece4; }
+        .experiences { padding-block: 82px 92px; background: #f2ecdf; }
         .section-heading { max-width: 660px; margin: 0 auto 43px; text-align: center; }
         .section-heading .eyebrow { justify-content: center; }
         .section-heading > p:last-child { margin-bottom: 0; color: var(--muted); line-height: 1.75; }
         .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-        .service-card { min-height: 235px; padding: 29px; border: 1px solid rgba(29,48,42,.08); background: var(--white); }
+        .service-card { min-height: 235px; padding: 29px; border: 1px solid rgba(40,39,36,.08); background: var(--white); }
         .service-icon { display: grid; width: 45px; height: 45px; margin-bottom: 30px; place-items: center; border-radius: 50%; background: #f7eee2; color: var(--tomato); font-size: 1.1rem; }
         .service-card h3 { margin-bottom: 9px; font-size: 1.55rem; }
         .service-card p { margin-bottom: 0; color: var(--muted); font-size: .9rem; line-height: 1.65; }
@@ -180,6 +170,20 @@
         .menu-callout p:not(.eyebrow) { max-width: 600px; margin-bottom: 0; color: rgba(255,255,255,.74); line-height: 1.75; }
         .menu-action { display: grid; justify-items: start; gap: 12px; }
         .menu-action small { color: rgba(255,255,255,.62); font-size: .74rem; }
+
+        .menu { padding-block: 92px 100px; }
+        .menu-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: 18px; }
+        .menu-category { padding: 27px clamp(20px, 3vw, 34px); border: 1px solid var(--line); background: var(--white); }
+        .menu-category h3 { margin-bottom: 5px; color: var(--green); font-size: 1.65rem; }
+        .menu-base { margin: 0 0 14px; color: var(--muted); font-size: .78rem; }
+        .menu-list { margin: 0; padding: 0; list-style: none; }
+        .menu-item { display: flex; justify-content: space-between; gap: 14px; padding-block: 11px; border-top: 1px solid var(--line); }
+        .menu-item:first-child { border-top: 0; }
+        .menu-item-name { display: block; font-size: .91rem; font-weight: 800; }
+        .menu-item-description { display: block; margin-top: 2px; color: var(--muted); font-size: .77rem; line-height: 1.45; }
+        .menu-price { flex: 0 0 auto; color: var(--tomato-dark); font-size: .91rem; font-weight: 800; white-space: nowrap; }
+        .menu-note { margin: 22px 0 0; padding: 17px 20px; border-left: 3px solid var(--gold); background: #f5efe3; color: #554f45; font-size: .88rem; line-height: 1.7; }
+        .menu-note strong { color: var(--green); }
 
         .visit { padding-block: 100px; }
         .visit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
@@ -193,13 +197,13 @@
         .address { margin: -9px 0 22px; color: var(--muted); line-height: 1.7; }
         .contact-link { display: inline-flex; align-items: center; gap: 10px; margin: 6px 0 25px; color: var(--tomato); font-size: 1.15rem; font-weight: 700; text-decoration: none; }
         .amenities { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 25px; }
-        .amenity { display: flex; align-items: flex-start; gap: 10px; color: #46564e; font-size: .8rem; line-height: 1.5; }
+        .amenity { display: flex; align-items: flex-start; gap: 10px; color: #514c43; font-size: .8rem; line-height: 1.5; }
         .amenity-mark { flex: 0 0 auto; color: var(--tomato); font-weight: 700; }
         .visit-card .button { margin-top: 27px; }
 
-        .site-footer { padding-block: 30px; background: #142f28; color: rgba(255,255,255,.7); }
+        .site-footer { padding-block: 30px; background: #172f65; color: rgba(255,255,255,.78); }
         .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
-        .footer-brand { color: #fff; font-family: var(--serif); font-size: 1.1rem; }
+        .footer-brand { width: 90px; height: 30px; object-fit: contain; }
         .footer-inner p { margin: 0; font-size: .75rem; }
         .footer-links { display: flex; flex-wrap: wrap; gap: 20px; }
         .footer-links a { font-size: .78rem; text-decoration: none; }
@@ -208,10 +212,12 @@
         @media (max-width: 800px) {
             .main-nav { gap: 15px; }
             .main-nav a { font-size: .78rem; }
-            .header-inner { gap: 14px; }
+            .header-inner { flex-wrap: wrap; gap: 14px; }
+            .main-nav { order: 3; width: 100%; justify-content: space-between; gap: 12px; }
             .intro-grid { gap: 35px; }
             .menu-inner { grid-template-columns: 1fr; gap: 28px; }
             .menu-action { grid-template-columns: auto 1fr; align-items: center; }
+            .menu-grid { grid-template-columns: 1fr; }
             .visit-grid { grid-template-columns: 1fr; }
             .hero-rating { right: 24px; }
         }
@@ -220,14 +226,14 @@
             .container { width: min(100% - 36px, 480px); }
             .announcement { font-size: .7rem; }
             .header-inner { min-height: 70px; flex-wrap: wrap; padding-block: 12px; }
-            .brand-mark { width: 37px; height: 37px; }
-            .brand-name { font-size: 1.1rem; }
-            .brand-location { font-size: .58rem; }
+            .brand-logo { width: 70px; height: 24px; }
+            .brand-name { font-size: .98rem; }
+            .brand-location { font-size: .55rem; }
             .header-call { min-height: 39px; padding-inline: 12px; font-size: .76rem; }
             .main-nav { order: 3; width: 100%; justify-content: space-between; padding: 3px 0 1px; }
-            .main-nav a { font-size: .75rem; }
+            .main-nav a { font-size: .7rem; }
             .hero { min-height: 690px; min-height: min(760px, calc(100svh - 110px)); align-items: flex-start; }
-            .hero-shade { background: linear-gradient(90deg, rgba(16,39,32,.88), rgba(16,39,32,.54)), linear-gradient(0deg, rgba(16,39,32,.65), transparent 75%); }
+            .hero-shade { background: linear-gradient(90deg, rgba(17,39,78,.88), rgba(17,39,78,.54)), linear-gradient(0deg, rgba(17,39,78,.65), transparent 75%); }
             .hero-content { padding-block: 80px 180px; }
             h1 { font-size: clamp(3.4rem, 16vw, 5rem); }
             .hero-copy { font-size: .96rem; }
@@ -246,6 +252,8 @@
             .menu-callout { padding-block: 72px; }
             .menu-callout h2 { font-size: 2.75rem; }
             .menu-action { grid-template-columns: 1fr; justify-items: stretch; }
+            .menu { padding-block: 72px; }
+            .menu-category { padding: 23px 20px; }
             .visit { padding-block: 70px; }
             .visit-card { padding: 26px 22px; }
             .visit-card h2 { font-size: 2rem; }
@@ -299,13 +307,14 @@
     <header class="site-header">
         <div class="container header-inner">
             <a class="brand" href="#inizio" aria-label="Pizzeria La Svolta, torna all'inizio">
-                <span class="brand-mark" aria-hidden="true">S.</span>
+                <img class="brand-logo" src="assets/logo-la-svolta.png" alt="">
                 <span>
-                    <span class="brand-name">Pizzeria La Svolta</span>
+                    <span class="brand-name">Pizzeria</span>
                     <span class="brand-location">Fermo · Marche</span>
                 </span>
             </a>
             <nav class="main-nav" aria-label="Navigazione principale">
+                <a href="#menu">Menù</a>
                 <a href="#esperienza">La pizzeria</a>
                 <a href="#servizi">Servizi</a>
                 <a href="#orari">Orari</a>
@@ -380,12 +389,149 @@
             </div>
         </section>
 
-        <section class="menu-callout" id="menu">
+        <section class="menu" id="menu" aria-labelledby="menu-title">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Fatte per essere gustate</p>
+                    <h2 id="menu-title">Il nostro menù</h2>
+                    <p>Le pizze, i calzoni e le focacce de La Svolta. Per informazioni o per ordinare, chiamaci.</p>
+                </div>
+                <div class="menu-grid">
+                    <article class="menu-category">
+                        <h3>Pizze rosse</h3>
+                        <p class="menu-base">Base pomodoro e mozzarella</p>
+                        <ul class="menu-list">
+                            <li class="menu-item"><span><span class="menu-item-name">Margherita</span></span><span class="menu-price">€ 4,80</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">Diavolata</span><span class="menu-item-description">Salame piccante</span></span><span class="menu-price">€ 5,80</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">Funghi</span></span><span class="menu-price">€ 5,50</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">Carciofi</span></span><span class="menu-price">€ 5,50</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">Capricciosa</span><span class="menu-item-description">Funghi, olive, carciofi, cotto</span></span><span class="menu-price">€ 6,80</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">4 Stagioni</span><span class="menu-item-description">Funghi, olive, carciofi, cotto</span></span><span class="menu-price">€ 6,80</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">Cotto</span></span><span class="menu-price">€ 5,50</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">Parmigiana</span><span class="menu-item-description">Melanzane, grana</span></span><span class="menu-price">€ 6,00</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">Napoli</span><span class="menu-item-description">Alici, capperi, origano</span></span><span class="menu-price">€ 6,00</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">Mais</span></span><span class="menu-price">€ 5,50</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">Tonnata</span><span class="menu-item-description">Tonno, cipolla</span></span><span class="menu-price">€ 6,50</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">Salsiccia</span></span><span class="menu-price">€ 5,80</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">Peperolivetonno</span></span><span class="menu-price">€ 6,80</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">Tirolese</span><span class="menu-item-description">Porcini, speck fuori cottura</span></span><span class="menu-price">€ 7,50</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">Porcini</span></span><span class="menu-price">€ 6,00</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">Trentina</span><span class="menu-item-description">Gorgonzola, speck</span></span><span class="menu-price">€ 6,50</span></li>
+                        </ul>
+                    </article>
+                    <article class="menu-category">
+                        <h3>Pizze rosse speciali</h3>
+                        <p class="menu-base">Base pomodoro e mozzarella</p>
+                        <ul class="menu-list">
+                            <li class="menu-item"><span><span class="menu-item-name">L'Indigeribile</span><span class="menu-item-description">Cipolla, salsiccia, peperoni, gorgonzola</span></span><span class="menu-price">€ 7,50</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">Boom</span><span class="menu-item-description">Carciofi, olive, portofughi, salsiccia, salame, patate, wurstel</span></span><span class="menu-price">€ 8,50</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">Ghiotta</span><span class="menu-item-description">Radicchio, scamorza, speck fuori cottura</span></span><span class="menu-price">€ 7,50</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">Salmonata</span><span class="menu-item-description">Cipolla, prezzemolo, panna, salmone</span></span><span class="menu-price">€ 7,50</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">La Fiera</span><span class="menu-item-description">Peperoni, salame, cipolla, olive</span></span><span class="menu-price">€ 7,00</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">Gratinata</span><span class="menu-item-description">Melanzane, zucchine, pomodori e peperoni gratinati</span></span><span class="menu-price">€ 7,00</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">Vivi</span><span class="menu-item-description">Ricotta, salame</span></span><span class="menu-price">€ 6,80</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">La Salata</span><span class="menu-item-description">Prosciutto cotto, wurstel, salsiccia, salame piccante</span></span><span class="menu-price">€ 7,00</span></li>
+                        </ul>
+                    </article>
+                    <article class="menu-category">
+                        <h3>Bufale</h3>
+                        <ul class="menu-list">
+                            <li class="menu-item"><span><span class="menu-item-name">Bufalina</span><span class="menu-item-description">Pomodoro, bufala e basilico</span></span><span class="menu-price">€ 6,50</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">Da Luigi</span><span class="menu-item-description">Pomodoro, peperoni, rucola, pomodorini, bufala a crudo</span></span><span class="menu-price">€ 7,50</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">Tricolore</span><span class="menu-item-description">Bianca, pomodorini, basilico e bufala</span></span><span class="menu-price">€ 7,00</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">Regina</span><span class="menu-item-description">Bianca, pomodorini, acciughe, bufala, prezzemolo e grana fuori cottura</span></span><span class="menu-price">€ 8,00</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">Caprese di Bufala</span></span><span class="menu-price">€ 8,00</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">Eros</span><span class="menu-item-description">Focaccia sottile con crudo, pomodorini e stracciatella di bufala fuori cottura</span></span><span class="menu-price">€ 8,00</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">Giorgio</span><span class="menu-item-description">Pomodoro e stracci di bufala fuori cottura</span></span><span class="menu-price">€ 8,00</span></li>
+                        </ul>
+                    </article>
+                    <article class="menu-category">
+                        <h3>Senza mozzarella</h3>
+                        <ul class="menu-list">
+                            <li class="menu-item"><span><span class="menu-item-name">Senzanome</span><span class="menu-item-description">Mais, patate, prosciutto cotto e maionese</span></span><span class="menu-price">€ 7,00</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">C.T.S.</span><span class="menu-item-description">Pomodoro, funghi, cipolla, salsiccia e rosmarino fuori cottura</span></span><span class="menu-price">€ 6,50</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">Marinara</span><span class="menu-item-description">Pomodoro, aglio e origano</span></span><span class="menu-price">€ 4,00</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">Caponata</span><span class="menu-item-description">Peperoni, olive, cipolla, capperi e prezzemolo fuori cottura</span></span><span class="menu-price">€ 5,80</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">Sottobosco</span><span class="menu-item-description">Rucola, funghi, pomodorini, radicchio, nod., salsa</span></span><span class="menu-price">€ 7,00</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">Puttanesca</span><span class="menu-item-description">Pomodoro, carciofi, olive, olio al profumo di aglio</span></span><span class="menu-price">€ 6,50</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">Proteica</span><span class="menu-item-description">Fesa di tacchino, rucola, funghi, pomodorini e balsamico</span></span><span class="menu-price">€ 7,50</span></li>
+                        </ul>
+                    </article>
+                    <article class="menu-category">
+                        <h3>Pizze bianche</h3>
+                        <p class="menu-base">Base mozzarella</p>
+                        <ul class="menu-list">
+                            <li class="menu-item"><span><span class="menu-item-name">Contadina</span><span class="menu-item-description">Prosciutto crudo, pomodoro a fette</span></span><span class="menu-price">€ 7,00</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">Biancaneve</span><span class="menu-item-description">Panna, grana</span></span><span class="menu-price">€ 5,80</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">Tosta</span><span class="menu-item-description">Peperoni e salsiccia</span></span><span class="menu-price">€ 6,50</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">Zucchine</span></span><span class="menu-price">€ 5,50</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">Crostino</span><span class="menu-item-description">Funghi e prosciutto cotto</span></span><span class="menu-price">€ 6,00</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">Boscaiola</span><span class="menu-item-description">Funghi e prosciutto crudo fuori cottura</span></span><span class="menu-price">€ 7,00</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">4 Formaggi</span><span class="menu-item-description">Gorgonzola, scamorza e grana</span></span><span class="menu-price">€ 6,80</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">Trevigiana</span><span class="menu-item-description">Radicchio, scamorza</span></span><span class="menu-price">€ 6,50</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">Vegetariana</span><span class="menu-item-description">Melanzane, zucchine, radicchio, spinaci e pomodori</span></span><span class="menu-price">€ 6,50</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">Rucola</span><span class="menu-item-description">Rucola, pomodorini, grana</span></span><span class="menu-price">€ 6,80</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">Caprese</span></span><span class="menu-price">€ 6,50</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">Conero</span><span class="menu-item-description">Zucchine e gamberetti</span></span><span class="menu-price">€ 6,50</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">Tartufata</span><span class="menu-item-description">Funghi e salsa tartufata</span></span><span class="menu-price">€ 6,50</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">Norcina</span><span class="menu-item-description">Funghi, salsa tartufata e salsiccia</span></span><span class="menu-price">€ 7,00</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">Rustica</span><span class="menu-item-description">Patate e salsiccia</span></span><span class="menu-price">€ 6,00</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">Crucca</span><span class="menu-item-description">Patate e wurstel</span></span><span class="menu-price">€ 6,00</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">Invernale</span><span class="menu-item-description">Radicchio, cipolla, salsiccia</span></span><span class="menu-price">€ 6,80</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">Michele</span><span class="menu-item-description">Scamorza e speck fuori cottura</span></span><span class="menu-price">€ 7,00</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">Gorgo</span><span class="menu-item-description">Gorgonzola e noci</span></span><span class="menu-price">€ 6,80</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">Spinning</span><span class="menu-item-description">Spinaci e salsiccia</span></span><span class="menu-price">€ 6,00</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">Flook</span><span class="menu-item-description">Zucchine, speck e grana fuori cottura</span></span><span class="menu-price">€ 7,50</span></li>
+                        </ul>
+                    </article>
+                    <article class="menu-category">
+                        <h3>Bianche speciali</h3>
+                        <p class="menu-base">Base mozzarella</p>
+                        <ul class="menu-list">
+                            <li class="menu-item"><span><span class="menu-item-name">Bunny</span><span class="menu-item-description">Rucola, stracchino</span></span><span class="menu-price">€ 6,80</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">La Svolta 1</span><span class="menu-item-description">Wurstel, spinaci, gorgonzola e salsiccia</span></span><span class="menu-price">€ 6,80</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">Bax</span><span class="menu-item-description">Zucchine, radicchio, stracchino</span></span><span class="menu-price">€ 6,80</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">Moscon d'Oro</span><span class="menu-item-description">Rucola, stracchino e salmone</span></span><span class="menu-price">€ 8,00</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">Pugliese</span><span class="menu-item-description">Alici, pomodorini, cipolla, olive nere, origano</span></span><span class="menu-price">€ 7,00</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">Fredda</span><span class="menu-item-description">Mais, lattuga e gamberetti in salsa rosa</span></span><span class="menu-price">€ 8,00</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">La Svolta 2</span><span class="menu-item-description">Porcini, gorgonzola e speck</span></span><span class="menu-price">€ 7,50</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">Coriolano</span><span class="menu-item-description">Porcini, radicchio e rucola in cottura</span></span><span class="menu-price">€ 7,00</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">Salutare</span><span class="menu-item-description">Zucchine, porcini e grana</span></span><span class="menu-price">€ 7,00</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">Mimì</span><span class="menu-item-description">Wurstel, melanzane, pomodorini, alici, prezzemolo, peperoni</span></span><span class="menu-price">€ 6,80</span></li>
+                        </ul>
+                    </article>
+                    <article class="menu-category">
+                        <h3>Calzoni</h3>
+                        <ul class="menu-list">
+                            <li class="menu-item"><span><span class="menu-item-name">Pomodoro, basilico e mozzarella</span></span><span class="menu-price">€ 5,80</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">Ricotta, salame e mozzarella</span></span><span class="menu-price">€ 7,00</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">Cotto e funghi</span></span><span class="menu-price">€ 6,50</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">Speck, ricotta e noci</span></span><span class="menu-price">€ 8,00</span></li>
+                        </ul>
+                    </article>
+                    <article class="menu-category">
+                        <h3>Focacce</h3>
+                        <ul class="menu-list">
+                            <li class="menu-item"><span><span class="menu-item-name">Aperte a metà</span></span><span class="menu-price">€ 4,50</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">San Giorgio</span><span class="menu-item-description">Pomodorini, alici, capperi, origano</span></span><span class="menu-price">€ 5,50</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">Integrale</span></span><span class="menu-price">€ 4,50</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">Rosmarino</span></span><span class="menu-price">€ 3,80</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">Rosmarino sottile</span></span><span class="menu-price">€ 3,50</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">Cipollata</span><span class="menu-item-description">Cipolla e rosmarino</span></span><span class="menu-price">€ 4,50</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">Farro</span><span class="menu-item-description">Con farina di farro bio</span></span><span class="menu-price">€ 6,00</span></li>
+                            <li class="menu-item"><span><span class="menu-item-name">Cereali</span><span class="menu-item-description">Con farina di cereali bio</span></span><span class="menu-price">€ 6,00</span></li>
+                        </ul>
+                    </article>
+                </div>
+                <p class="menu-note"><strong>Impasti alternativi disponibili:</strong> integrale, farro bio e Millemilioni di Cereali Bio. Per verificare disponibilità e ingredienti, chiamaci.</p>
+            </div>
+        </section>
+        <section class="menu-callout" aria-label="Ordina una pizza">
             <div class="container menu-inner">
                 <div>
                     <p class="eyebrow">Hai già fame?</p>
-                    <h2>Scopri il menù e ordina la tua preferita.</h2>
-                    <p>Per conoscere le pizze disponibili, chiedere informazioni o preparare il tuo ordine, chiamaci: saremo felici di aiutarti.</p>
+                    <h2>La tua preferita ti aspetta.</h2>
+                    <p>Chiamaci per informazioni, disponibilità e ordini.</p>
                 </div>
                 <div class="menu-action">
                     <a class="button button-primary" href="tel:+390734221655">Chiama la pizzeria <span aria-hidden="true">↗</span></a>
@@ -424,7 +570,7 @@
 
     <footer class="site-footer">
         <div class="container footer-inner">
-            <span class="footer-brand">Pizzeria La Svolta</span>
+            <img class="footer-brand" src="assets/logo-la-svolta.png" alt="Pizzeria La Svolta">
             <p>Via Dante Zeppilli 13 · 63900 Fermo (FM)</p>
             <div class="footer-links">
                 <a href="#inizio">Torna all'inizio ↑</a>
