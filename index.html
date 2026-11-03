@@ -208,7 +208,6 @@
         .footer-links { display: flex; flex-wrap: wrap; gap: 20px; }
         .footer-links a { font-size: .78rem; text-decoration: none; }
         .footer-links a:hover { color: #f0c46b; }
-        .mobile-call { display: none; }
         @media (max-width: 800px) {
             .main-nav { gap: 15px; }
             .main-nav a { font-size: .78rem; }
@@ -260,20 +259,6 @@
             .amenities { grid-template-columns: 1fr; }
             .footer-inner { align-items: flex-start; flex-direction: column; }
             .footer-links { gap: 16px; }
-            .site-footer { padding-bottom: 98px; }
-            .mobile-call {
-                position: fixed;
-                z-index: 15;
-                right: 14px;
-                bottom: 14px;
-                left: 14px;
-                display: flex;
-                min-height: 54px;
-                align-items: center;
-                justify-content: center;
-                gap: 10px;
-                box-shadow: 0 8px 26px rgba(20,47,40,.28);
-            }
         }
         @media (prefers-reduced-motion: reduce) {
             *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
@@ -578,6 +563,5 @@
             </div>
         </div>
     </footer>
-    <a class="button button-primary mobile-call" href="tel:+390734221655">Chiama la pizzeria <span aria-hidden="true">↗</span></a>
 </body>
 </html>
