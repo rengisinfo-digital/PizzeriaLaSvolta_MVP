@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#183b32">
+    <meta name="description" content="Pizzeria La Svolta a Fermo: ci trovi in Via Dante Zeppilli 13. Aperta dal lunedì al sabato, dalle 16:30 alle 21:45. Chiama per informazioni e ordini.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Pizzeria La Svolta | Una buona serata, a Fermo">
+    <meta property="og:description" content="Pizza da gustare al tavolo, da asporto o a domicilio. Scopri La Svolta in Via Dante Zeppilli 13, a Fermo.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=1200&auto=format&fit=crop">
+    <title>Pizzeria La Svolta a Fermo | Orari, indirizzo e contatti</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=2000&auto=format&fit=crop">
+    <style>
+        :root {
+            color-scheme: light;
+            --ink: #1d302a;
+            --green: #183b32;
+            --green-soft: #244b3f;
+            --paper: #f7f5ef;
+            --white: #fffefa;
+            --muted: #6b756e;
+            --line: #e8e5dc;
+            --tomato: #bd583d;
+            --tomato-dark: #9f432d;
+            --gold: #d7a24a;
+            --serif: "DM Serif Display", Georgia, serif;
+            --sans: "DM Sans", Arial, sans-serif;
+            --shadow: 0 24px 70px rgba(29, 48, 42, .11);
+        }
+
+        *, *::before, *::after { box-sizing: border-box; }
+        html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+        body {
+            margin: 0;
+            background: var(--paper);
+            color: var(--ink);
+            font-family: var(--sans);
+            -webkit-font-smoothing: antialiased;
+        }
+        img { display: block; max-width: 100%; }
+        a { color: inherit; }
+        a:focus-visible { outline: 3px solid var(--gold); outline-offset: 4px; }
+        .container { width: min(1160px, calc(100% - 48px)); margin-inline: auto; }
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin: 0 0 16px;
+            color: var(--tomato);
+            font-size: .73rem;
+            font-weight: 700;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+        }
+        .eyebrow::before { width: 22px; height: 1px; background: currentColor; content: ""; }
+        .announcement {
+            padding: 10px 20px;
+            background: var(--green);
+            color: #fff;
+            text-align: center;
+            font-size: .78rem;
+            letter-spacing: .02em;
+        }
+        .announcement a { color: #f1c875; font-weight: 700; text-decoration: none; }
+        .site-header {
+            position: sticky;
+            z-index: 20;
+            top: 0;
+            border-bottom: 1px solid rgba(29, 48, 42, .08);
+            background: rgba(247, 245, 239, .94);
+            backdrop-filter: blur(14px);
+        }
+        .header-inner {
+            display: flex;
+            min-height: 82px;
+            align-items: center;
+            justify-content: space-between;
+            gap: 28px;
+        }
+        .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; }
+        .brand-mark {
+            display: grid;
+            width: 42px;
+            height: 42px;
+            place-items: center;
+            border: 1px solid rgba(215, 162, 74, .55);
+            border-radius: 50%;
+            color: var(--tomato);
+            font-family: var(--serif);
+            font-size: 1.15rem;
+        }
+        .brand-name { display: block; font-family: var(--serif); font-size: 1.25rem; line-height: 1; }
+        .brand-location { display: block; margin-top: 5px; color: var(--muted); font-size: .64rem; letter-spacing: .12em; text-transform: uppercase; }
+        .main-nav { display: flex; align-items: center; gap: clamp(18px, 3vw, 36px); }
+        .main-nav a { color: #45554d; font-size: .86rem; font-weight: 600; text-decoration: none; transition: color .2s ease; }
+        .main-nav a:hover { color: var(--tomato); }
+        .button {
+            display: inline-flex;
+            min-height: 48px;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 0 23px;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            font: 700 .88rem var(--sans);
+            text-decoration: none;
+            transition: background .2s ease, color .2s ease, transform .2s ease;
+        }
+        .button:hover { transform: translateY(-2px); }
+        .button-primary { background: var(--tomato); color: #fff; }
+        .button-primary:hover { background: var(--tomato-dark); }
+        .button-outline { border-color: rgba(255,255,255,.55); color: #fff; }
+        .button-outline:hover { background: #fff; color: var(--green); }
+        .header-call { min-height: 42px; padding-inline: 17px; font-size: .82rem; }
+
+        .hero {
+            position: relative;
+            display: flex;
+            min-height: min(730px, calc(100svh - 120px));
+            align-items: center;
+            overflow: hidden;
+            background: var(--green);
+            color: #fff;
+        }
+        .hero-image, .hero-shade { position: absolute; inset: 0; width: 100%; height: 100%; }
+        .hero-image { object-fit: cover; object-position: center 54%; }
+        .hero-shade { background: linear-gradient(90deg, rgba(16, 39, 32, .91) 0%, rgba(16, 39, 32, .73) 48%, rgba(16, 39, 32, .14) 100%), linear-gradient(0deg, rgba(16,39,32,.25), transparent 40%); }
+        .hero-content { position: relative; z-index: 1; width: min(740px, 100%); padding-block: 100px 120px; }
+        .hero .eyebrow { color: #f0c46b; }
+        h1, h2, h3, p { margin-top: 0; }
+        h1, h2, h3 { font-family: var(--serif); font-weight: 400; }
+        h1 { max-width: 700px; margin-bottom: 22px; font-size: clamp(3.35rem, 8vw, 6.7rem); letter-spacing: -.035em; line-height: .98; }
+        h1 em { color: #f0c46b; font-weight: 400; }
+        .hero-copy { max-width: 525px; margin-bottom: 31px; color: rgba(255,255,255,.85); font-size: clamp(1rem, 1.7vw, 1.14rem); line-height: 1.75; }
+        .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+        .hero-rating {
+            position: absolute;
+            right: max(24px, calc((100vw - 1160px) / 2));
+            bottom: 45px;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            gap: 13px;
+            padding: 15px 19px;
+            border: 1px solid rgba(255,255,255,.22);
+            background: rgba(22, 47, 39, .74);
+            backdrop-filter: blur(10px);
+        }
+        .rating-stars { color: #f0c46b; letter-spacing: .08em; }
+        .rating-number { font-family: var(--serif); font-size: 1.65rem; line-height: 1; }
+        .rating-caption { display: block; margin-top: 4px; color: rgba(255,255,255,.72); font-size: .7rem; }
+
+        .intro { padding-block: 105px 100px; }
+        .intro-grid { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: clamp(45px, 8vw, 110px); }
+        .intro h2, .section-heading h2 { margin-bottom: 19px; font-size: clamp(2.5rem, 5vw, 4rem); letter-spacing: -.025em; line-height: 1.06; }
+        .intro-copy { color: var(--muted); font-size: 1rem; line-height: 1.9; }
+        .intro-aside { position: relative; padding: 37px 38px; border-left: 2px solid var(--gold); background: var(--white); box-shadow: var(--shadow); }
+        .intro-aside p { margin: 0; font-family: var(--serif); font-size: clamp(1.35rem, 2.4vw, 1.85rem); line-height: 1.45; }
+        .intro-aside span { display: block; margin-top: 17px; color: var(--muted); font-size: .78rem; }
+        .experiences { padding-block: 82px 92px; background: #eeece4; }
+        .section-heading { max-width: 660px; margin: 0 auto 43px; text-align: center; }
+        .section-heading .eyebrow { justify-content: center; }
+        .section-heading > p:last-child { margin-bottom: 0; color: var(--muted); line-height: 1.75; }
+        .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+        .service-card { min-height: 235px; padding: 29px; border: 1px solid rgba(29,48,42,.08); background: var(--white); }
+        .service-icon { display: grid; width: 45px; height: 45px; margin-bottom: 30px; place-items: center; border-radius: 50%; background: #f7eee2; color: var(--tomato); font-size: 1.1rem; }
+        .service-card h3 { margin-bottom: 9px; font-size: 1.55rem; }
+        .service-card p { margin-bottom: 0; color: var(--muted); font-size: .9rem; line-height: 1.65; }
+
+        .menu-callout { padding-block: 92px; background: var(--green); color: #fff; }
+        .menu-inner { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 45px; }
+        .menu-callout .eyebrow { color: #f0c46b; }
+        .menu-callout h2 { max-width: 660px; margin-bottom: 16px; font-size: clamp(2.4rem, 5vw, 3.8rem); line-height: 1.08; }
+        .menu-callout p:not(.eyebrow) { max-width: 600px; margin-bottom: 0; color: rgba(255,255,255,.74); line-height: 1.75; }
+        .menu-action { display: grid; justify-items: start; gap: 12px; }
+        .menu-action small { color: rgba(255,255,255,.62); font-size: .74rem; }
+
+        .visit { padding-block: 100px; }
+        .visit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .visit-card { padding: clamp(27px, 4vw, 44px); border: 1px solid var(--line); background: var(--white); }
+        .visit-card h2 { margin-bottom: 26px; font-size: 2.25rem; }
+        .hours-row { display: flex; justify-content: space-between; gap: 16px; padding-block: 15px; border-bottom: 1px solid var(--line); font-size: .91rem; }
+        .hours-row:last-of-type { border: 0; }
+        .hours-row strong { text-align: right; }
+        .closed { color: var(--tomato); }
+        .visit-note { margin: 17px 0 0; color: var(--muted); font-size: .8rem; line-height: 1.6; }
+        .address { margin: -9px 0 22px; color: var(--muted); line-height: 1.7; }
+        .contact-link { display: inline-flex; align-items: center; gap: 10px; margin: 6px 0 25px; color: var(--tomato); font-size: 1.15rem; font-weight: 700; text-decoration: none; }
+        .amenities { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 25px; }
+        .amenity { display: flex; align-items: flex-start; gap: 10px; color: #46564e; font-size: .8rem; line-height: 1.5; }
+        .amenity-mark { flex: 0 0 auto; color: var(--tomato); font-weight: 700; }
+        .visit-card .button { margin-top: 27px; }
+
+        .site-footer { padding-block: 30px; background: #142f28; color: rgba(255,255,255,.7); }
+        .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+        .footer-brand { color: #fff; font-family: var(--serif); font-size: 1.1rem; }
+        .footer-inner p { margin: 0; font-size: .75rem; }
+        .footer-links { display: flex; flex-wrap: wrap; gap: 20px; }
+        .footer-links a { font-size: .78rem; text-decoration: none; }
+        .footer-links a:hover { color: #f0c46b; }
+        .mobile-call { display: none; }
+        @media (max-width: 800px) {
+            .main-nav { gap: 15px; }
+            .main-nav a { font-size: .78rem; }
+            .header-inner { gap: 14px; }
+            .intro-grid { gap: 35px; }
+            .menu-inner { grid-template-columns: 1fr; gap: 28px; }
+            .menu-action { grid-template-columns: auto 1fr; align-items: center; }
+            .visit-grid { grid-template-columns: 1fr; }
+            .hero-rating { right: 24px; }
+        }
+        @media (max-width: 620px) {
+            html { scroll-padding-top: 125px; }
+            .container { width: min(100% - 36px, 480px); }
+            .announcement { font-size: .7rem; }
+            .header-inner { min-height: 70px; flex-wrap: wrap; padding-block: 12px; }
+            .brand-mark { width: 37px; height: 37px; }
+            .brand-name { font-size: 1.1rem; }
+            .brand-location { font-size: .58rem; }
+            .header-call { min-height: 39px; padding-inline: 12px; font-size: .76rem; }
+            .main-nav { order: 3; width: 100%; justify-content: space-between; padding: 3px 0 1px; }
+            .main-nav a { font-size: .75rem; }
+            .hero { min-height: 690px; min-height: min(760px, calc(100svh - 110px)); align-items: flex-start; }
+            .hero-shade { background: linear-gradient(90deg, rgba(16,39,32,.88), rgba(16,39,32,.54)), linear-gradient(0deg, rgba(16,39,32,.65), transparent 75%); }
+            .hero-content { padding-block: 80px 180px; }
+            h1 { font-size: clamp(3.4rem, 16vw, 5rem); }
+            .hero-copy { font-size: .96rem; }
+            .hero-actions { align-items: stretch; flex-direction: column; }
+            .hero-actions .button { width: 100%; }
+            .hero-rating { right: auto; bottom: 25px; left: 18px; }
+            .intro { padding-block: 73px; }
+            .intro-grid { grid-template-columns: 1fr; gap: 28px; }
+            .intro h2, .section-heading h2 { font-size: 2.75rem; }
+            .intro-aside { padding: 27px; }
+            .experiences { padding-block: 70px; }
+            .section-heading { margin-bottom: 30px; }
+            .service-grid { grid-template-columns: 1fr; gap: 12px; }
+            .service-card { min-height: auto; padding: 24px; }
+            .service-icon { margin-bottom: 20px; }
+            .menu-callout { padding-block: 72px; }
+            .menu-callout h2 { font-size: 2.75rem; }
+            .menu-action { grid-template-columns: 1fr; justify-items: stretch; }
+            .visit { padding-block: 70px; }
+            .visit-card { padding: 26px 22px; }
+            .visit-card h2 { font-size: 2rem; }
+            .amenities { grid-template-columns: 1fr; }
+            .footer-inner { align-items: flex-start; flex-direction: column; }
+            .footer-links { gap: 16px; }
+            .site-footer { padding-bottom: 98px; }
+            .mobile-call {
+                position: fixed;
+                z-index: 15;
+                right: 14px;
+                bottom: 14px;
+                left: 14px;
+                display: flex;
+                min-height: 54px;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                box-shadow: 0 8px 26px rgba(20,47,40,.28);
+            }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+        }
+    </style>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Pizzeria",
+            "name": "Pizzeria La Svolta",
+            "telephone": "+39 0734 221655",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Via Dante Zeppilli 13",
+                "addressLocality": "Fermo",
+                "addressRegion": "FM",
+                "postalCode": "63900",
+                "addressCountry": "IT"
+            },
+            "openingHours": ["Mo-Sa 16:30-21:45"]
+        }
+    </script>
+</head>
+<body>
+    <div class="announcement">
+        A Fermo, in Via Dante Zeppilli 13
+        <span aria-hidden="true"> · </span>
+        <a href="tel:+390734221655">Chiama +39 0734 221655</a>
+    </div>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="#inizio" aria-label="Pizzeria La Svolta, torna all'inizio">
+                <span class="brand-mark" aria-hidden="true">S.</span>
+                <span>
+                    <span class="brand-name">Pizzeria La Svolta</span>
+                    <span class="brand-location">Fermo · Marche</span>
+                </span>
+            </a>
+            <nav class="main-nav" aria-label="Navigazione principale">
+                <a href="#esperienza">La pizzeria</a>
+                <a href="#servizi">Servizi</a>
+                <a href="#orari">Orari</a>
+                <a href="#dove-siamo">Dove siamo</a>
+            </nav>
+            <a class="button button-primary header-call" href="tel:+390734221655">Chiama ora <span aria-hidden="true">↗</span></a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="inizio" aria-labelledby="hero-title">
+            <img class="hero-image" src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=2000&auto=format&fit=crop" alt="Pizza appena sfornata da condividere" fetchpriority="high">
+            <div class="hero-shade" aria-hidden="true"></div>
+            <div class="container">
+                <div class="hero-content">
+                    <p class="eyebrow">Pizzeria a Fermo</p>
+                    <h1 id="hero-title">La tua serata<br>prende una <em>Svolta.</em></h1>
+                    <p class="hero-copy">Una pizzeria accogliente a Fermo, dove ritrovarsi a tavola o godersi la pizza a casa. Scegli come preferisci: ti aspettiamo.</p>
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="tel:+390734221655">Chiama per ordinare <span aria-hidden="true">↗</span></a>
+                        <a class="button button-outline" href="#dove-siamo">Vieni a trovarci</a>
+                    </div>
+                </div>
+            </div>
+            <aside class="hero-rating" aria-label="Valutazione media: 4,6 su 5, oltre 400 recensioni">
+                <div>
+                    <span class="rating-stars" aria-hidden="true">★</span>
+                    <span class="rating-caption">Oltre 400 recensioni</span>
+                </div>
+                <span class="rating-number">4,6<span style="font: 500 .75rem var(--sans)"> / 5</span></span>
+            </aside>
+        </section>
+
+        <section class="intro" id="esperienza">
+            <div class="container intro-grid">
+                <div>
+                    <p class="eyebrow">Il piacere di stare insieme</p>
+                    <h2>Un posto semplice.<br>Una buona scelta.</h2>
+                    <p class="intro-copy">La Svolta è una pizzeria informale e accogliente a Fermo, pensata per una cena in famiglia, una pausa senza fretta o una pizza da portare a casa. Puoi accomodarti all'interno o all'aperto, ordinare da asporto oppure chiedere la consegna.</p>
+                </div>
+                <aside class="intro-aside">
+                    <p>“Che sia una serata in compagnia o una cena a casa, passa da La Svolta.”</p>
+                    <span>Via Dante Zeppilli 13 · Fermo</span>
+                </aside>
+            </div>
+        </section>
+
+        <section class="experiences" id="servizi">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">A modo tuo</p>
+                    <h2>La pizza, come ti va.</h2>
+                    <p>Passa a trovarci oppure gusta la tua pizza dove preferisci: scegli il servizio più comodo per te.</p>
+                </div>
+                <div class="service-grid">
+                    <article class="service-card">
+                        <span class="service-icon" aria-hidden="true">01</span>
+                        <h3>Al tavolo</h3>
+                        <p>Un ambiente informale e accogliente, con posti a sedere anche all'aperto.</p>
+                    </article>
+                    <article class="service-card">
+                        <span class="service-icon" aria-hidden="true">02</span>
+                        <h3>Da asporto</h3>
+                        <p>Ordina e passa a ritirare la tua pizza direttamente in pizzeria.</p>
+                    </article>
+                    <article class="service-card">
+                        <span class="service-icon" aria-hidden="true">03</span>
+                        <h3>A domicilio</h3>
+                        <p>Preferisci restare a casa? È disponibile anche il servizio di consegna.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="menu-callout" id="menu">
+            <div class="container menu-inner">
+                <div>
+                    <p class="eyebrow">Hai già fame?</p>
+                    <h2>Scopri il menù e ordina la tua preferita.</h2>
+                    <p>Per conoscere le pizze disponibili, chiedere informazioni o preparare il tuo ordine, chiamaci: saremo felici di aiutarti.</p>
+                </div>
+                <div class="menu-action">
+                    <a class="button button-primary" href="tel:+390734221655">Chiama la pizzeria <span aria-hidden="true">↗</span></a>
+                    <small>+39 0734 221655</small>
+                </div>
+            </div>
+        </section>
+
+        <section class="visit" aria-label="Orari e informazioni">
+            <div class="container visit-grid">
+                <article class="visit-card" id="orari">
+                    <p class="eyebrow">Ti aspettiamo</p>
+                    <h2>Orari di apertura</h2>
+                    <div class="hours-row"><span>Lunedì – Sabato</span><strong>16:30 – 21:45</strong></div>
+                    <div class="hours-row"><span>Domenica</span><strong class="closed">Chiuso</strong></div>
+                    <p class="visit-note">Per informazioni sugli ordini e sui servizi, chiamaci al numero della pizzeria.</p>
+                    <a class="button button-primary" href="tel:+390734221655">Chiama +39 0734 221655</a>
+                </article>
+
+                <article class="visit-card" id="dove-siamo">
+                    <p class="eyebrow">Ci trovi qui</p>
+                    <h2>Vieni a La Svolta</h2>
+                    <p class="address">Via Dante Zeppilli, 13<br>63900 Fermo (FM), Italia</p>
+                    <a class="contact-link" href="tel:+390734221655"><span aria-hidden="true">☎</span> +39 0734 221655</a>
+                    <div class="amenities" aria-label="Informazioni e servizi">
+                        <div class="amenity"><span class="amenity-mark" aria-hidden="true">✓</span><span>Ingresso, parcheggio e posti a sedere accessibili</span></div>
+                        <div class="amenity"><span class="amenity-mark" aria-hidden="true">✓</span><span>Parcheggio gratuito su strada nelle vicinanze</span></div>
+                        <div class="amenity"><span class="amenity-mark" aria-hidden="true">✓</span><span>Carte di credito, debito e pagamenti NFC</span></div>
+                        <div class="amenity"><span class="amenity-mark" aria-hidden="true">✓</span><span>Servizio al tavolo, asporto e consegna</span></div>
+                    </div>
+                    <a class="button button-primary" href="https://www.google.com/maps/search/?api=1&amp;query=Via+Dante+Zeppilli+13%2C+63900+Fermo" target="_blank" rel="noopener noreferrer">Apri indicazioni stradali <span aria-hidden="true">↗</span></a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <span class="footer-brand">Pizzeria La Svolta</span>
+            <p>Via Dante Zeppilli 13 · 63900 Fermo (FM)</p>
+            <div class="footer-links">
+                <a href="#inizio">Torna all'inizio ↑</a>
+                <a href="tel:+390734221655">+39 0734 221655</a>
+            </div>
+        </div>
+    </footer>
+    <a class="button button-primary mobile-call" href="tel:+390734221655">Chiama la pizzeria <span aria-hidden="true">↗</span></a>
+</body>
+</html>
