@@ -221,10 +221,10 @@
             .hero-rating { right: 24px; }
         }
         @media (max-width: 620px) {
-            html { scroll-padding-top: 125px; }
+            html { scroll-padding-top: 132px; }
             .container { width: min(100% - 36px, 480px); }
             .announcement { font-size: .7rem; }
-            .header-inner { min-height: 70px; flex-wrap: wrap; padding-block: 12px; }
+            .header-inner { min-height: 70px; flex-wrap: wrap; gap: 10px 14px; padding-block: 10px; }
             .brand-logo { width: 70px; height: 24px; }
             .brand-name { font-size: .98rem; }
             .brand-location { font-size: .55rem; }
@@ -534,6 +534,29 @@
         }
         .menu-item:hover .menu-price::after { left: 130%; }
         @media (max-width: 620px) {
+            html { scroll-padding-top: 132px; }
+            .main-nav {
+                display: grid;
+                grid-template-columns: repeat(5, minmax(0, 1fr));
+                gap: 2px;
+                margin: 0;
+                padding: 4px;
+                border: 1px solid rgba(36, 75, 155, .08);
+                border-radius: 14px;
+                background: rgba(36, 75, 155, .045);
+                overflow: visible;
+            }
+            .main-nav a {
+                min-width: 0;
+                padding: 9px 0;
+                border-radius: 10px;
+                font-size: .66rem;
+                letter-spacing: -.035em;
+                text-align: center;
+                white-space: nowrap;
+            }
+            .main-nav a:hover { background: rgba(36, 75, 155, .08); }
+            .main-nav a::after { content: none; }
             .menu-category::before { top: 20px; right: 18px; width: 58px; }
             .menu-category--calzoni::before { width: 64px; height: 52px; }
             .menu-category--focacce::before { width: 68px; height: 48px; }
